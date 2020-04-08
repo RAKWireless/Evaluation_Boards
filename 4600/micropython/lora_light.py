@@ -1,4 +1,5 @@
 import utime
+import light
 from ulora import TTN, uLoRa
 # Refer to device pinout / schematics diagrams for pin details
 LORA_CS = const(4)
@@ -35,8 +36,11 @@ lora = uLoRa(
 # ...Then send data as bytearray
 
 def send(data):
-	b = bytearray(data)
-	print("send data:", b)
+	light.init()
+	t = light.get_data()
+	s = str(t)
+	b = bytearray(s)
+	print("send light data:", b)
 	lora.send_data(b, len(b), lora.frame_counter)
 
 def config(devaddr,nwskey,appkey,region):

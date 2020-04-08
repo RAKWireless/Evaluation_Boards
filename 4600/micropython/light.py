@@ -31,7 +31,7 @@ def get_data():
 	h= math.pow(2,e)
 	light = m*(0.01 * h)
 	print('opt3001:light strength = %f'%light)
-
+	return light
 
 
 
