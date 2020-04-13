@@ -1,7 +1,11 @@
 
-//4600 supply 2 gpio for wisblock io_interface, Uart and I2C please refer to other example
-int gpio_1 = 14;
-int gpio_2 = 17;
+//811 supply 4 gpio for wisblock io_interface, Uart and I2C please refer to other example
+
+int gpio_1 = PB2;
+int gpio_2 = PA1;
+int gpio_3 = PB3;
+int gpio_4 = PB5;
+
 
 void setup()
 {
@@ -9,6 +13,8 @@ void setup()
   while ( !Serial ) delay(10);    
   pinMode(gpio_1, OUTPUT);
   pinMode(gpio_2, OUTPUT);
+  pinMode(gpio_3, OUTPUT);
+  pinMode(gpio_4, OUTPUT);
 }
 
 
