@@ -1,4 +1,14 @@
-# RAK811_LoRaWAN_Arduino
+
+
+# Change log 
+2020.4.20
+
+1. Support sensor,like bme680, lis3dh, lps22hb, max_7q, opt3001, shtc3
+2. Support IO, like RS485, GPIO
+
+# RAK811_LoRaWAN_Arduino 
+2019.12.30
+
 
 Firstly, thank you very much to .@sabas1080 for his contribution on RAK811 LoRa Tracker board + Arduino.
 
