@@ -7,12 +7,12 @@ https://www.hackster.io/electronic-cats/how-to-use-rak4260-with-arduino-ide-4bcf
 
 Here I will introduce you how to use it with wisblock. Our board is like below. The base board now include uart and usb com. The usb com is one component of wisblock like sensors. In Arduino, we use usb for test, battery is needed.
 
-![](https://github.com/RAKWireless/Wisblock/blob/master/4260/resource/board.jpg) 
+![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4260/resource/board.jpg) 
 
 # Burn bootloader
 
 Burn bootloader-bast-wan-v3.4.0.bin with Jlink like below:
-![](https://github.com/RAKWireless/Wisblock/blob/master/4260/resource/download.png)
+![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4260/resource/download.png)
 
 
 # Install BSP
@@ -32,7 +32,7 @@ Now write "Electronic Cats" (without quotes) in the search bar.
 Now write "Electronic Cats" (without quotes) in the search bar.
 Click in install for "ElectronicCatsSAM DLC", jus wait to finish to install and only close the window.
 
-![](https://github.com/RAKWireless/Wisblock/blob/master/4260/resource/lib.png)
+![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4260/resource/lib.png)
 
 # Install lora lib
 
@@ -40,7 +40,7 @@ https://github.com/BeelanMX/Beelan-LoRaWAN
 
 # Compile as below
 
-![](https://github.com/RAKWireless/Wisblock/blob/master/4260/resource/bastwan.png)
+![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4260/resource/bastwan.png)
 
 You will see the information via usb in serial tool.
 
