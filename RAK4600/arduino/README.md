@@ -1,4 +1,11 @@
+# Change log
+2020.4.10
+
+1. Support shtc3,lps22hb,bme689
+2. Support GPIO
+
 # RAK4600 Arduino
+2020.1.4
 
 ## Introduction
 
@@ -135,3 +142,7 @@ BLE and LoRa demo is `RAK4600_ble_scan_lora.ino`, Modify the lora parameters to 
 We can see the following logs.
 
 ![Run information](https://github.com/RAKWireless/Wisblock/blob/master/RAK4600/image/ble%2Blora.png)
+
+## Support peripheral
+
+LoraWAN, BLE, lis3dh, opt3001
