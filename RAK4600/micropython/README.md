@@ -1,4 +1,11 @@
+# Change log
+2020.4.10
+
+1. Support sensor, lis3dh, opt3001,bme680
+2. Support GPIO
+
 # Micropython & LoRaWAN on RAK4600 
+2020.2.4
 
 Glad to announce we have run micropython on RAK4600, which is a new try to combine micropython and LoRaWAN!
 
@@ -68,3 +75,7 @@ Here also shows how to use with wisblock sensor
 1. Because of bme680 is large to REPL, it is in the firmware. Just use environment_test.py to test.
 2. All sensor script is independent. Use REPL to push what you need.
 3. lora_light.py shows an example how to send light data to TTN.
+
+## Support peripheral
+
+LoraWAN, BLE, shtc3, lps22hb
