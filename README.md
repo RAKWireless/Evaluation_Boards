@@ -1,6 +1,5 @@
 # Wisblock
 
-## Overview
 ### 1 Introduction
 WisBlock series modules are a series of stacked board built by RAK company
 for IoT industry. WisBlock modules support dozens of CPUs, sensors and
@@ -111,3 +110,61 @@ through RAK industrial gateway.
 ### 5 WisBlock Series Product 
 
 ![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/3.png)
+
+### 6 Interfaces
+
+RAK5005 provides the following interfaces, headers, jumpers, buttons and
+connectors:
+
+ 1 PCS connector forWisDuo
+
+ 1 PCS connector for WisIO
+
+ 4 PCS connector for WisSensor
+
+ Micro USB
+
+ 3 sets of 4-pin 2.54mm Headers (UART, GPIOS, I2C, power etc.)  2-pin Battery interface
+
+ 2-pin Solar Panel interface
+
+ LEDs
+
+ Reset Button
+
+### 7 Electrical and Mechanical Specifications
+
+Stresses above those listed as “absolute maximum ratings” may cause
+permanent damage to the device. This is a stress rating, functional operation of
+the device under these conditions is not advised. Exposure to maximum rating
+conditions may affect device reliability
+
+![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/4.png)
+
+Here are the detailed dimensions of the RAK5005:
+
+![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/5.png)
+
+### 8 WisBlock Module in Production
+
+RAK5005 supports kinds of module, according to the function and the position on
+the RAK5005, they are classified into three categories:
+
+WisDuo: containing MCU and wireless link transceiver. 
+
+WisSensor: integrate mems sensor
+
+WisIO: to extend IO, power supply and sensors. 
+
+The following table shows the WisDuo Modules.
+
+![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/6.png)
+
+The following table shows the WisSensor Modules.
+
+![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/7.png)
+
+The following table shows the WisIO Modules.
+
+![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/8.png)
+
