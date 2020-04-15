@@ -1,5 +1,6 @@
 How to Use RAK4260 with Arduino IDE
-==
+== 
+2020.4.10
 
 RAK4260 is based on ATSAML21J18B from microchip, one lora module of wisblock. Before use it, User should prepare something. Our friend shows how to use it in their base board, more details is at :
 
@@ -44,4 +45,6 @@ https://github.com/BeelanMX/Beelan-LoRaWAN
 
 You will see the information via usb in serial tool.
 
+# Support 
 
+LoraWAN
