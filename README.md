@@ -124,7 +124,9 @@ connectors:
 
  Micro USB
 
- 3 sets of 4-pin 2.54mm Headers (UART, GPIOS, I2C, power etc.)  2-pin Battery interface
+ 3 sets of 4-pin 2.54mm Headers (UART, GPIOS, I2C, power etc.) 
+
+ 2-pin Battery interface
 
  2-pin Solar Panel interface
 
