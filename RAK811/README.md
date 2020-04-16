@@ -60,7 +60,7 @@ Or you can add region define like below:
 8. When download ok, the Gateway and server are working properly.  
 The RAK811 will be auto send data to server:
 ![Joinning LoRaWAN](https://github.com/RAKWireless/Wisblock/blob/master/res/log.png)  
-TTN receive data:  
+9. We test it in Lora Server, receive data per 10s:  
 ![TTN data](https://github.com/RAKWireless/Wisblock/blob/master/res/send%20data.png)
 
 
