@@ -31,28 +31,27 @@ Check the other lib below install or not?
 Then install the BSP for STM32.
 If install completed as following:
 ![install board](https://github.com/RAKWireless/Wisblock/blob/master/res/image/install%20Board.png)
-5. Download the LoRaWAN library from:  
-[https://github.com/mcci-catena/arduino-lmic#selecting-the-lorawan-region-configuration](https://github.com/mcci-catena/arduino-lmic#selecting-the-lorawan-region-configuration)  
-Add it to Arduino IDE:  
-![LoRaWAN library](https://github.com/RAKWireless/Wisblock/blob/master/res/image/Install%20LoRaWAN%20library.png)
-6. OK, development environment is finished. Open the Arduino_RAK811_LoRaWAN.ino，config 3 parameters for LoRaWAN_OTAA:  
-![config 3 parameters](https://github.com/RAKWireless/Wisblock/blob/master/res/image/config%203%20parameters%20for%20LoRaWAN_OTAA.png)  
-And set Pins mapping:  
-![Pin mapping](https://github.com/RAKWireless/Wisblock/blob/master/res/image/Pin%20mapping.png)
+5. Download the LoRaWAN library from below. It is a very tiny lorawan protocol only support ABP mode for now, if you want to use OTAA, you can develop it yourself in the lib:  
+    https://github.com/adafruit/TinyLoRa 
 
-7. Compile it,ingnore the Waring:  
-![compile success](https://github.com/RAKWireless/Wisblock/blob/master/res/image/Compile%20success.png)  
+![LoRaWAN library](https://github.com/RAKWireless/Wisblock/blob/master/res/lib.png)
+
+
+6. OK, development environment is finished. Open the Arduino_RAK811_LoRaWAN.ino，config 3 parameters for LoRaWAN_ABP. The demo is test in US915. If you want to define other region, you should change in the lib, the path in your pc maybe C:\Users\..\Documents\Arduino\libraries\TinyLoRa\TinyLoRa.h :  
+![config 3 parameters](https://github.com/RAKWireless/Wisblock/blob/master/res/config.png)  
+
+7. Compile and download via Arduino IDE.
+
 You can download firware to board via Arduino, What need?
-1. Install STM32CubeProgrammer from https://www.st.com/en/development-tools/stm32cubeprog.html
-2. Choose in Arduino: Tools->Upload method:"STM32CubeProgrammer(Serial)"
-3. Connect Boot0 to VDD, you can find it on back of wisblock, then reset
-4. Click Download in Arduino, it will automatically download. 
+a. Install STM32CubeProgrammer from https://www.st.com/en/development-tools/stm32cubeprog.html
+b. Choose in Arduino: Tools->Upload method:"STM32CubeProgrammer(Serial)"
+c. Connect Boot0 to VDD, you can find it on back of wisblock, then reset
+d. Click Download in Arduino, it will automatically download. 
 
 8. When download ok, the Gateway and server are working properly.  
-The RAK811 will be auto join LoRaWAN:
-![Joinning LoRaWAN](https://github.com/RAKWireless/Wisblock/blob/master/res/image/Joined.png)  
+The RAK811 will be auto send data to server:
+![Joinning LoRaWAN](https://github.com/RAKWireless/Wisblock/blob/master/res/log.png)  
 TTN receive data:  
-![TTN data](https://github.com/RAKWireless/Wisblock/blob/master/res/image/TTN%20receive%20data.png)
+![TTN data](https://github.com/RAKWireless/Wisblock/blob/master/res/send%20data.png)
 
-Important Note:
 
