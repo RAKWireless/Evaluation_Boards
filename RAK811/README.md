@@ -37,17 +37,25 @@ If install completed as following:
     ![LoRaWAN library](https://github.com/RAKWireless/Wisblock/blob/master/res/lib.png)
 
 
-6. OK, development environment is finished. Open the Arduino_RAK811_LoRaWAN.ino，config 3 parameters for LoRaWAN_ABP. The demo is test in US915. If you want to define other region, you should change in the lib, the path in your pc maybe C:\Users\..\Documents\Arduino\libraries\TinyLoRa\TinyLoRa.h Or you can add like below:  
-![config 3 parameters](https://github.com/RAKWireless/Wisblock/blob/master/res/define.png)
+6. OK, development environment is finished. Open the Arduino_RAK811_LoRaWAN.ino，config 3 parameters for LoRaWAN_ABP. The demo is test in US915. If you want to define other region, you should change in the lib, the path in your pc maybe C:\Users\..\Documents\Arduino\libraries\TinyLoRa\TinyLoRa.h.  
+
 ![config 3 parameters](https://github.com/RAKWireless/Wisblock/blob/master/res/config.png)  
 
-7. Compile and download via Arduino IDE.
+Or you can add region define like below:
 
-You can download firware to board via Arduino, What need?
-a. Install STM32CubeProgrammer from https://www.st.com/en/development-tools/stm32cubeprog.html
-b. Choose in Arduino: Tools->Upload method:"STM32CubeProgrammer(Serial)"
-c. Connect Boot0 to VDD, you can find it on back of wisblock, then reset
-d. Click Download in Arduino, it will automatically download. 
+![config 3 parameters](https://github.com/RAKWireless/Wisblock/blob/master/res/define.png)
+
+
+7. Compile and download via Arduino IDE.You can download firware to board via Arduino, What need?
+
+    a. Install STM32CubeProgrammer from https://www.st.com/en/development-tools/stm32cubeprog.html
+
+    b. Choose in Arduino: Tools->Upload method:"STM32CubeProgrammer(Serial)"
+
+    c. Connect Boot0 to VDD, you can find it on back of wisblock, then reset
+
+    d. Click Download in Arduino, it will automatically download. 
+
 
 8. When download ok, the Gateway and server are working properly.  
 The RAK811 will be auto send data to server:
