@@ -34,10 +34,11 @@ If install completed as following:
 5. Download the LoRaWAN library from below. It is a very tiny lorawan protocol only support ABP mode for now, if you want to use OTAA, you can develop it yourself in the lib:  
     https://github.com/adafruit/TinyLoRa 
 
-![LoRaWAN library](https://github.com/RAKWireless/Wisblock/blob/master/res/lib.png)
+    ![LoRaWAN library](https://github.com/RAKWireless/Wisblock/blob/master/res/lib.png)
 
 
-6. OK, development environment is finished. Open the Arduino_RAK811_LoRaWAN.ino，config 3 parameters for LoRaWAN_ABP. The demo is test in US915. If you want to define other region, you should change in the lib, the path in your pc maybe C:\Users\..\Documents\Arduino\libraries\TinyLoRa\TinyLoRa.h :  
+6. OK, development environment is finished. Open the Arduino_RAK811_LoRaWAN.ino，config 3 parameters for LoRaWAN_ABP. The demo is test in US915. If you want to define other region, you should change in the lib, the path in your pc maybe C:\Users\..\Documents\Arduino\libraries\TinyLoRa\TinyLoRa.h Or you can add like below:  
+![config 3 parameters](https://github.com/RAKWireless/Wisblock/blob/master/res/define.png)
 ![config 3 parameters](https://github.com/RAKWireless/Wisblock/blob/master/res/config.png)  
 
 7. Compile and download via Arduino IDE.
