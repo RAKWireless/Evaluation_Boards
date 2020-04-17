@@ -53,6 +53,8 @@ Or you can add region define like below:
     b. Choose in Arduino: Tools->Upload method:"STM32CubeProgrammer(Serial)"
 
     c. Connect Boot0 to VDD, you can find it on back of wisblock, then reset
+    
+    ![config 3 parameters](https://github.com/RAKWireless/Wisblock/blob/master/res/811.jpg)
 
     d. Click Download in Arduino, it will automatically download. 
 
