@@ -71,6 +71,8 @@ The bootloader of RAK4600 supports the serial port upgrade program. Use the Ardu
 
 ​    1. If you use a WisBLOCK board (RAK5005), the silk screen of pin 18 on the back of the board is "**RX1**".
 
+![DFU](https://github.com/RAKWireless/Wisblock/blob/master/res/4600.jpg)
+
 ​    2. You can also refer to the following link to customize your own bootloader.[Adafruit_nRF52_Bootloader](https://github.com/adafruit/Adafruit_nRF52_Bootloader) 
 
 
