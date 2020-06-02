@@ -1,3 +1,7 @@
+# Note: To adapt to RAK4630, we have changed some code. So user should install it by Add ZIP from Arduino.
+----
+----
+
 # SX126x-Arduino
 ----
 Arduino library for LoRa communication with Semtech SX126x chips. It is based on Semtech's SX126x libraries and adapted to the Arduino framework for ESP32, ESP8266 and nRF52832. It will not work with other uC's like AVR.    
