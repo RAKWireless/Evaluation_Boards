@@ -660,15 +660,15 @@ extern "C"
 
 		// Set radio in continuous reception
 		SX126xSetRx(0);
-
+/*
 		for (i = 0; i < 32; i++)
 		{
 			delay(1);
 			// Unfiltered RSSI value reading. Only takes the LSB value
 			rnd |= ((uint32_t)SX126xGetRssiInst() & 0x01) << i;
 		}
-
-        // rnd = SX126xGetRandom();
+*/
+        rnd = SX126xGetRandom();
 		RadioSleep();
 
 		return rnd;

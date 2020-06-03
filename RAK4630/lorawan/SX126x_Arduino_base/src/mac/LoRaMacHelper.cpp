@@ -23,6 +23,8 @@
 #include "region/RegionCommon.h"
 #include "system/utilities.h"
 
+#include "mac/LoRaMacTest.h"///
+
 extern "C"
 {
 
@@ -486,9 +488,9 @@ extern "C"
 						mibReq.Param.AdrEnable = true;
 						LoRaMacMibSetRequestConfirm(&mibReq);
 
-#if defined(REGION_EU868)
+// #if defined(REGION_EU868)
 						LoRaMacTestSetDutyCycleOn(false);
-#endif
+// #endif
 						TimerInit(&ComplianceTestTxNextPacketTimer, OnComplianceTestTxNextPacketTimerEvent);
 						TimerSetValue(&ComplianceTestTxNextPacketTimer, 5000);
 
@@ -668,9 +670,6 @@ extern "C"
 		}
 	}
 
-	static char strlog1[64];
-	static char strlog2[64];
-	static char strlog3[64];
 	lmh_error_status lmh_init(lmh_callback_t *callbacks, lmh_param_t lora_param)
 	{
 		LoRaMacStatus_t error_status;
@@ -743,8 +742,8 @@ extern "C"
 		mibReq.Param.Class = CLASS_A;
 		LoRaMacMibSetRequestConfirm(&mibReq);
 
-//#if defined(REGION_EU868)
 		LoRaMacTestSetDutyCycleOn(LORAWAN_DUTYCYCLE_ON);
+#if defined(REGION_EU868)
 #if (USE_SEMTECH_DEFAULT_CHANNEL_LINEUP == 1)
 		LoRaMacChannelAdd(3, (ChannelParams_t)LC4);
 		LoRaMacChannelAdd(4, (ChannelParams_t)LC5);
@@ -762,7 +761,7 @@ extern "C"
 		mibReq.Param.Rx2Channel = (Rx2ChannelParams_t){869525000, DR_3};
 		LoRaMacMibSetRequestConfirm(&mibReq);
 #endif
-//#endif
+#endif
 
 		return LMH_SUCCESS;
 	}

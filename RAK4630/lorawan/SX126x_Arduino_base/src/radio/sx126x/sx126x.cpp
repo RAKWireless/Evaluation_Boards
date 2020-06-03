@@ -223,13 +223,13 @@ extern "C"
 		uint8_t buf[] = {0, 0, 0, 0};
 
 		// Set radio in continuous reception
-		SX126xSetRx(0);
+		// SX126xSetRx(0);
 
-		delay(1);
+		// delay(1);
 
 		SX126xReadRegisters(RANDOM_NUMBER_GENERATORBASEADDR, buf, 4);
 
-		SX126xSetStandby(STDBY_RC);
+		// SX126xSetStandby(STDBY_RC);
 
 		return (buf[0] << 24) | (buf[1] << 16) | (buf[2] << 8) | buf[3];
 	}

@@ -1962,10 +1962,9 @@ extern "C"
 
 		if (IsLoRaMacNetworkJoined == false)
 		{
-			RxWindow1Delay = LoRaMacParams.JoinAcceptDelay1 + RxWindow1Config.WindowOffset - 950;
-			RxWindow2Delay = LoRaMacParams.JoinAcceptDelay2 + RxWindow2Config.WindowOffset - 950;
-            // RxWindow1Delay = LoRaMacParams.JoinAcceptDelay1 + RxWindow1Config.WindowOffset;
-			// RxWindow2Delay = LoRaMacParams.JoinAcceptDelay2 + RxWindow2Config.WindowOffset;
+			RxWindow1Delay = LoRaMacParams.JoinAcceptDelay1 + RxWindow1Config.WindowOffset - 1000;
+			RxWindow2Delay = LoRaMacParams.JoinAcceptDelay2 + RxWindow2Config.WindowOffset - 1000;
+
 		}
 		else
 		{
@@ -1975,9 +1974,7 @@ extern "C"
 			}
 			 RxWindow1Delay = LoRaMacParams.ReceiveDelay1 + RxWindow1Config.WindowOffset-950;
 			 RxWindow2Delay = LoRaMacParams.ReceiveDelay2 + RxWindow2Config.WindowOffset-1900;
-            //RxWindow1Delay = LoRaMacParams.ReceiveDelay1 + RxWindow1Config.WindowOffset;
-			//RxWindow2Delay = LoRaMacParams.ReceiveDelay2 + RxWindow2Config.WindowOffset;
-            // Serial.printf("============RxWindow1Delay====%d========RxWindow2Delay========%d====================\n");
+
 		}
 
 		// Schedule transmission of frame

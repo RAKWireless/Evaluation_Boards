@@ -29,7 +29,7 @@ SPIClass SPI_LORA(NRF_SPIM2, PIN_LORA_MISO, PIN_LORA_SCLK, PIN_LORA_MOSI);
 #define SCHED_QUEUE_SIZE 60  /**< Maximum number of events in the scheduler queue. */
 #define LORAWAN_ADR 1 /**< LoRaWAN Adaptive Data Rate enabled (the end-device should be static here). */
 #define LORAWAN_DATERATE DR_0 /*LoRaMac datarates definition, from DR_0 to DR_5*/
-#define LORAWAN_TX_POWER TX_POWER_0 /*LoRaMac tx power definition, from TX_POWER_0 to TX_POWER_15*/
+#define LORAWAN_TX_POWER TX_POWER_5 /*LoRaMac tx power definition, from TX_POWER_0 to TX_POWER_15*/
 #define JOINREQ_NBTRIALS 3 /**< Number of trials for the join request. */
 DeviceClass_t gCurrentClass = CLASS_A; /* class definition*/
 lmh_confirm gCurrentConfirm = LMH_CONFIRMED_MSG; /* confirm/unconfirm packet definition*/
@@ -55,7 +55,7 @@ static lmh_callback_t lora_callbacks = {BoardGetBatteryLevel, BoardGetUniqueId, 
 //OTAA keys
 uint8_t nodeDeviceEUI[8] = {0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22};
 uint8_t nodeAppEUI[8] = {0xB8, 0x27, 0xEB, 0xFF, 0xFE, 0x39, 0x00, 0x00};
-uint8_t nodeAppKey[16] = {0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22,0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22};
+uint8_t nodeAppKey[16] = {0x33, 0x33, 0x22, 0x22, 0x22, 0x22, 0x22, 0x22,0x22, 0x22, 0x22, 0x22, 0x22, 0x22, 0x33, 0x33};
 
 //ABP keys
 uint32_t nodeDevAddr = 0x11111111;
@@ -104,10 +104,10 @@ void setup()
 
 	// Initialize Serial for debug output
 	Serial.begin(115200);
-  while(!Serial){delay(10);}
+        while(!Serial){delay(10);}
 	Serial.println("=====================================");
-	Serial.println("RAK4630 LoRaWan!!!");
-  Serial.println("=====================================");
+	Serial.println("Welcome to RAK4630 LoRaWan!!!");
+        Serial.println("=====================================");
 
 // #ifdef NRF52_SERIES
 // 	pinMode(30, OUTPUT);
@@ -150,9 +150,8 @@ void setup()
 		Serial.printf("lmh_init failed - %d\n", err_code);
 	}
 
-	// For some regions we might need to define the sub band the gateway is listening to
-	// This must be called AFTER lmh_init()
-	/// \todo This is for Dragino LPS8 gateway. How about other gateways???
+	// EU868 use 1
+        // US915 use 2
 	if (!lmh_setSubBandChannels(1))
 	{
 		Serial.println("lmh_setSubBandChannels failed. Wrong sub band requested?");
@@ -181,10 +180,13 @@ void lorawan_has_joined_handler(void)
 	Serial.println("ABP Mode!");
 #endif
 
-	lmh_class_request(gCurrentClass);
-
-	TimerSetValue(&appTimer, LORAWAN_APP_TX_DUTYCYCLE);
-	TimerStart(&appTimer);
+  lmh_error_status ret = lmh_class_request(gCurrentClass);
+  if(ret == LMH_SUCCESS)
+  {
+        delay(1000);
+  	TimerSetValue(&appTimer, LORAWAN_APP_TX_DUTYCYCLE);
+  	TimerStart(&appTimer);
+  }
 }
 
 /**@brief Function for handling LoRaWan received data from Gateway
@@ -232,7 +234,7 @@ void lorawan_confirm_class_handler(DeviceClass_t Class)
     // Informs the server that switch has occurred ASAP
     m_lora_app_data.buffsize = 0;
     m_lora_app_data.port = gAppPort;
-    lmh_send(&m_lora_app_data, gCurrentConfirm);
+    // lmh_send(&m_lora_app_data, gCurrentConfirm);
 }
 
 void send_lora_frame(void)
@@ -245,19 +247,14 @@ void send_lora_frame(void)
 	}
 
 	uint32_t i = 0;
+        memset(m_lora_app_data.buffer, 0, LORAWAN_APP_DATA_BUFF_SIZE);
 	m_lora_app_data.port = gAppPort;
 	m_lora_app_data.buffer[i++] = 'H';
 	m_lora_app_data.buffer[i++] = 'e';
 	m_lora_app_data.buffer[i++] = 'l';
 	m_lora_app_data.buffer[i++] = 'l';
 	m_lora_app_data.buffer[i++] = 'o';
-	m_lora_app_data.buffer[i++] = ' ';
-	m_lora_app_data.buffer[i++] = 'w';
-	m_lora_app_data.buffer[i++] = 'o';
-	m_lora_app_data.buffer[i++] = 'r';
-	m_lora_app_data.buffer[i++] = 'l';
-	m_lora_app_data.buffer[i++] = 'd';
-	m_lora_app_data.buffer[i++] = '!';
+        m_lora_app_data.buffer[i++] = '!';
 	m_lora_app_data.buffsize = i;
 
     lmh_error_status error = lmh_send(&m_lora_app_data, gCurrentConfirm);
