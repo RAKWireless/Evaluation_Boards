@@ -616,10 +616,10 @@ extern "C"
 		{
 			Radio.Sleep();
 		}
-		else
-		{
-			OnRxWindow2TimerEvent();
-		}
+		//else
+		//{
+		//	OnRxWindow2TimerEvent();
+		//}
 
 		// Setup timers
 		if (IsRxWindowsEnabled == true)
@@ -629,14 +629,14 @@ extern "C"
             // TimerSetValue(&RxWindowTimer1, 4000);
             ///////////////////////////////////////////////
 			TimerStart(&RxWindowTimer1);
-			if (LoRaMacDeviceClass != CLASS_C)
-			{
+			//if (LoRaMacDeviceClass != CLASS_C)
+			//{
 			    /////////////////////////////////////////////////
 				TimerSetValue(&RxWindowTimer2, RxWindow2Delay);
 				// TimerSetValue(&RxWindowTimer2, 5000);
 				TimerStart(&RxWindowTimer2);
                 /////////////////////////////////////////////////
-			}
+			//}
 			if ((LoRaMacDeviceClass == CLASS_C) || (NodeAckRequested == true))
 			{
 				getPhy.Attribute = PHY_ACK_TIMEOUT;
