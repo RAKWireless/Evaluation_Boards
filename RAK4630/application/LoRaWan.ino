@@ -259,7 +259,7 @@ void lorawan_confirm_class_handler(DeviceClass_t Class)
     // Informs the server that switch has occurred ASAP
     m_lora_app_data.buffsize = 0;
     m_lora_app_data.port = gAppPort;
-    // lmh_send(&m_lora_app_data, gCurrentConfirm);
+    lmh_send(&m_lora_app_data, gCurrentConfirm);
 }
 
 void send_lora_frame(void)

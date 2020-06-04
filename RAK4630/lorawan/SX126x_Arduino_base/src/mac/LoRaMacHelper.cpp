@@ -617,6 +617,7 @@ extern "C"
 			default:
 				app_data.port = mcpsIndication->Port;
 				app_data.buffsize = mcpsIndication->BufferSize;
+				mcpsIndication->Buffer[app_data.buffsize-1] = 0;
 				app_data.buffer = mcpsIndication->Buffer;
 				app_data.rssi = mcpsIndication->Rssi;
 				app_data.snr = mcpsIndication->Snr;
