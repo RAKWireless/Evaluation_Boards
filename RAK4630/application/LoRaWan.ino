@@ -175,8 +175,8 @@ void setup()
 		Serial.printf("lmh_init failed - %d\n", err_code);
 	}
 
-	// EU868 use 1
-        // US915 use 2
+	// EU868 KR920 IN865 AS923 set to 1
+    // US915 AU915 set to 2
 	if (!lmh_setSubBandChannels(1))
 	{
 		Serial.println("lmh_setSubBandChannels failed. Wrong sub band requested?");
