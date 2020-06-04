@@ -641,7 +641,7 @@ extern "C"
 			{
 				getPhy.Attribute = PHY_ACK_TIMEOUT;
 				phyParam = RegionGetPhyParam(LoRaMacRegion, &getPhy);
-				TimerSetValue(&AckTimeoutTimer, RxWindow2Delay + phyParam.Value);
+				TimerSetValue(&AckTimeoutTimer, RxWindow2Delay + phyParam.Value + 1900);
 				TimerStart(&AckTimeoutTimer);
 			}
 		}
