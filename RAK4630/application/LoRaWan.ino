@@ -107,7 +107,36 @@ void setup()
         while(!Serial){delay(10);}
 	Serial.println("=====================================");
 	Serial.println("Welcome to RAK4630 LoRaWan!!!");
-        Serial.println("=====================================");
+#if (OVER_THE_AIR_ACTIVATION != 0)
+  Serial.println("Type: OTAA");
+#else
+  Serial.println("Type: ABP");
+#endif
+
+#if defined(REGION_AS923)
+    Serial.println("Region: AS923");
+#elif defined(REGION_AU915)
+    Serial.println("Region: AU915");
+#elif defined(REGION_CN470)
+    Serial.println("Region: CN470");
+#elif defined(REGION_CN779)
+    Serial.println("Region: CN779");
+#elif defined(REGION_EU433)
+    Serial.println("Region: EU433");
+#elif defined(REGION_IN865)
+    Serial.println("Region: IN865");
+#elif defined(REGION_EU868)
+    Serial.println("Region: EU868");
+#elif defined(REGION_KR920)
+    Serial.println("Region: KR920");
+#elif defined(REGION_US915)
+    Serial.println("Region: US915");
+#elif defined(REGION_US915_HYBRID)
+    Serial.println("Region: US915_HYBRID");
+#else
+    Serial.println("Please define a region in the compiler options.");
+#endif
+    Serial.println("=====================================");
 
 // #ifdef NRF52_SERIES
 // 	pinMode(30, OUTPUT);
