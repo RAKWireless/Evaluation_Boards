@@ -155,11 +155,7 @@ void setup()
 	}
 
 	// Initialize LoRa chip.
-	err_code = lora_hardware_init(hwConfig);
-	if (err_code != 0)
-	{
-		Serial.printf("lora_hardware_init failed - %d\n", err_code);
-	}
+	ora_hardware_init(hwConfig);
 
 	// Setup the EUIs and Keys
 #if (OVER_THE_AIR_ACTIVATION != 0)
