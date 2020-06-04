@@ -120,10 +120,10 @@ extern "C"
 
 	void SX126xWaitOnBusy(void)
 	{
-		while (digitalRead(_hwConfig.PIN_LORA_BUSY) == HIGH)
+		uint32_t n = 1000;
+		while (digitalRead(_hwConfig.PIN_LORA_BUSY) == HIGH && n-- > 0)
 		{
-			delay(1000);
-            // Serial.println("================SX126xWaitOnBusy=======================");
+			delay(1);
 		}
 	}
 

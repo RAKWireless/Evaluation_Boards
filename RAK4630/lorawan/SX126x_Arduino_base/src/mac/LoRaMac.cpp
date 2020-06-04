@@ -1962,8 +1962,8 @@ extern "C"
 
 		if (IsLoRaMacNetworkJoined == false)
 		{
-			RxWindow1Delay = LoRaMacParams.JoinAcceptDelay1 + RxWindow1Config.WindowOffset - 1000;
-			RxWindow2Delay = LoRaMacParams.JoinAcceptDelay2 + RxWindow2Config.WindowOffset - 1000;
+			RxWindow1Delay = LoRaMacParams.JoinAcceptDelay1 + RxWindow1Config.WindowOffset;
+			RxWindow2Delay = LoRaMacParams.JoinAcceptDelay2 + RxWindow2Config.WindowOffset;
 
 		}
 		else
@@ -1972,8 +1972,8 @@ extern "C"
 			{
 				return LORAMAC_STATUS_LENGTH_ERROR;
 			}
-			 RxWindow1Delay = LoRaMacParams.ReceiveDelay1 + RxWindow1Config.WindowOffset-950;
-			 RxWindow2Delay = LoRaMacParams.ReceiveDelay2 + RxWindow2Config.WindowOffset-1900;
+			 RxWindow1Delay = LoRaMacParams.ReceiveDelay1 + RxWindow1Config.WindowOffset;
+			 RxWindow2Delay = LoRaMacParams.ReceiveDelay2 + RxWindow2Config.WindowOffset;
 
 		}
 
