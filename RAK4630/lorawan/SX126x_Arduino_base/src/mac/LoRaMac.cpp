@@ -2503,6 +2503,7 @@ extern "C"
 		if (txInfo->CurrentPayloadSize >= fOptLen)
 		{
 			txInfo->MaxPossiblePayload = txInfo->CurrentPayloadSize - fOptLen;
+			fOptLen = 0;
 		}
 		else
 		{
