@@ -348,7 +348,8 @@ void tx_lora_periodic_handler(void)
                break;
             }
        }
-       comdata = "$GPRMC,080655.00,A,4546.40891,N,12639.65641,E,1.045,328.42,170809,,,A*60";
+	   //for test
+       //comdata = "$GPRMC,080655.00,A,4546.40891,N,12639.65641,E,1.045,328.42,170809,,,A*60";
        Serial.println(comdata);
        res = parse_gps();
        if(res == 1)
@@ -373,7 +374,8 @@ void tx_lora_periodic_handler(void)
 
        memset(m_lora_app_data.buffer, 0, LORAWAN_APP_DATA_BUFF_SIZE);
        m_lora_app_data.port = gAppPort;
-       m_lora_app_data.buffer[i++] = 0x09;      
+       m_lora_app_data.buffer[i++] = 0x09;  
+       m_lora_app_data.buffer[i++] = ','; 	   
        while(j!=k+1)
        {
          m_lora_app_data.buffer[i++] = comdata[j];
