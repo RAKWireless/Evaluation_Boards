@@ -641,7 +641,7 @@ extern "C"
 			{
 				getPhy.Attribute = PHY_ACK_TIMEOUT;
 				phyParam = RegionGetPhyParam(LoRaMacRegion, &getPhy);
-				TimerSetValue(&AckTimeoutTimer, RxWindow2Delay + phyParam.Value + 1900);
+				TimerSetValue(&AckTimeoutTimer, RxWindow2Delay + phyParam.Value);
 				TimerStart(&AckTimeoutTimer);
 			}
 		}
@@ -2503,6 +2503,7 @@ extern "C"
 		if (txInfo->CurrentPayloadSize >= fOptLen)
 		{
 			txInfo->MaxPossiblePayload = txInfo->CurrentPayloadSize - fOptLen;
+			fOptLen = 0;
 		}
 		else
 		{
