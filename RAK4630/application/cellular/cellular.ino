@@ -17,11 +17,14 @@ void setup()
   digitalWrite(BG77_POWER_KEY,0);
   Serial1.begin(115200);
   delay(1000);
-  //while(!mySerial);
   Serial.println("BG77 power up!");
+  bg77_at("ATI",500);
+  delay(2000);
+  bg77_at("AT+QCFG=\"nwscanseq\",3,1",500);
+  delay(2000);  
 }
 //this function is suitable for most AT commands of bg96. e.g. bg96_at("ATI")
-void bg77_at(char *at)
+void bg77_at(char *at, uint16_t timeout)
 {
   char tmp[256] = {0};
   int len = strlen(at);
@@ -29,20 +32,14 @@ void bg77_at(char *at)
   tmp[len]='\r';
   Serial1.write(tmp);
   delay(10);
-  while(Serial1.available()){
+  while(Serial1.available()&& timeout--){
       bg77_rsp += char(Serial1.read());
-      delay(2);
+      delay(1);
   }
   Serial.println(bg77_rsp);
   bg77_rsp="";
 }
 void loop() // run over and over//
 { 
-    bg77_at("ATI");
-    delay(2000);
-//  if (mySerial.available()) 
-//    Serial.write(mySerial.read());
-//
-//  if (Serial.available())
-//    mySerial.write(Serial.read());
+
 }
