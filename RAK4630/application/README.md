@@ -1,27 +1,27 @@
 # LoraWAN Packet Format 
 
- Type                                 ID   
+ Type---------------------------------ID   
  
- Air temperature                      0x01  
+ Air temperature----------------------0x01  
  
- Air quality			                       0x02
+ Air quality--------------------------0x02
  
- Air humidity   	                    	0x03
+ Air humidity-------------------------0x03
  
- Pressure			                         	0x04
+ Pressure-----------------------------0x04
  
- Light					                           0x05
+ Light--------------------------------0x05
  
- Acceleration			                      0x06
+ Acceleration-------------------------0x06
  
- Water level			                       0x07
+ Water level--------------------------0x07
  
- Agriculture		                       	0x08
+ Agriculture--------------------------0x08
  
- GPS					                             0x09
+ GPS----------------------------------0x09
  
- Wind speed				                       0x0A
+ Wind speed---------------------------0x0A
  
- Photosynthetic		                    	0x0B
+ Photosynthetic-----------------------0x0B
  
  
