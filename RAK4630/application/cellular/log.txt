@@ -1,0 +1,200 @@
+
+[11:16:58.843]收←◆RAK4630 Cellular TEST With CHINA UNICOM NBIOT sim card!
+
+[11:17:02.849]收←◆BG77 power up!
+
+[11:17:03.343]收←◆
+
+[11:17:05.845]收←◆
+RDY
+AT+CGDCONT=1,"IP","snbiot"
+OK
+
+
+[11:17:08.346]收←◆
+APP RDY
+AT+QCFG="nwscanseq",03,1
+OK
+
+
+[11:17:10.848]收←◆AT+QCFG="band",F,2000095,2000095
+OK
+
+
+[11:17:13.350]收←◆AT+QCFG="iotopmode",1,1
+OK
+
+
+[11:17:15.851]收←◆AT+CFUN=1,0
+OK
+
+
+[11:17:18.350]收←◆AT+CPIN?
++CPIN: READY
+
+OK
+
+
+[11:17:22.853]收←◆AT+QNWINFO
++QNWINFO: "NBIoT","46001","LTE BAND 3",1452
+
+OK
+
+[11:17:23.351]收←◆AT+QCSQ
++QCSQ: "NBIoT",-103,-114,152,-10
+
+OK
+
+
+[11:17:25.851]收←◆AT+CSQ
++CSQ: 5,99
+
+OK
+
+
+[11:17:30.792]收←◆AT+QIACT=1
+OK
+
+
+[11:17:32.794]收←◆Begin receive packet from www.baidu.com!
+
+[11:17:43.582]收←◆AT+QPING=1,"www.baidu.com"
+OK
+
++QPING: 0,"61.135.169.125",32,469,255
+
++QPING: 0,"61.135.169.125",32,238,255
+
++QPING: 0,"61.135.169.125",32,207,255
+
++QPING: 0,"61.135.169.125",32,238,255
+
++QPING: 0,4,4,0,207,469,28
+
+Begin receive packet from www.baidu.com!
+
+[11:17:54.432]收←◆AT+QPING=1,"www.baidu.com"
+OK
+
++QPING: 0,"61.135.169.121",32,570,255
+
++QPING: 0,"61.135.169.121",32,239,255
+
++QPING: 0,"61.135.169.121",32,216,255
+
++QPING: 0,"61.135.169.121",32,211,255
+
++QPING: 0,4,4,0,211,570,309
+Begin receive packet from www.baidu.com!
+
+[11:18:05.136]收←◆AT+QPING=1,"www.baidu.com"
+OK
+
++QPING: 0,"61.135.169.125",32,684,255
+
++QPING: 0,"61.135.169.125",32,299,255
+
++QPING: 0,"61.135.169.125",32,381,255
+
++QPING: 0,"61.135.169.125",32,288,255
+
++QPING: 0,4,4,0,288,684,41
+Begin receive packet from www.baidu.com!
+
+[11:18:15.912]收←◆AT+QPING=1,"www.baidu.com"
+OK
+
++QPING: 0,"61.135.169.121",32,297,255
+
++QPING: 0,"61.135.169.121",32,238,255
+
++QPING: 0,"61.135.169.121",32,235,255
+
++QPING: 0,"61.135.169.121",32,201,255
+
++QPING: 0,4,4,0,201,297,24
+Begin receive packet from www.baidu.com!
+
+[11:18:26.689]收←◆AT+QPING=1,"www.baidu.com"
+OK
+
++QPING: 0,"61.135.169.121",32,501,255
+
++QPING: 0,"61.135.169.121",32,225,255
+
++QPING: 0,"61.135.169.121",32,186,255
+
++QPING: 0,"61.135.169.121",32,181,255
+
++QPING: 0,4,4,0,181,501,273
+Begin receive packet from www.baidu.com!
+
+[11:18:37.467]收←◆AT+QPING=1,"www.baidu.com"
+OK
+
++QPING: 0,"61.135.169.125",32,273,255
+
++QPING: 0,"61.135.169.125",32,194,255
+
++QPING: 0,"61.135.169.125",32,192,255
+
++QPING: 0,"61.135.169.125",32,178,255
+
++QPING: 0,4,4,0,178,273,20
+Begin receive packet from www.baidu.com!
+
+[11:18:48.243]收←◆AT+QPING=1,"www.baidu.com"
+OK
+
++QPING: 0,"61.135.169.125",32,1212,255
+
++QPING: 0,"61.135.169.125",32,267,255
+
++QPING: 0,"61.135.169.125",32,384,255
+
++QPING: 0,"61.135.169.125",32,383,255
+
++QPING: 0,4,4,0,267,1212,5
+Begin receive packet from www.baidu.com!
+
+[11:18:59.020]收←◆AT+QPING=1,"www.baidu.com"
+OK
+
++QPING: 0,"61.135.169.121",32,563,255
+
++QPING: 0,"61.135.169.121",32,346,255
+
++QPING: 0,"61.135.169.121",32,237,255
+
++QPING: 0,"61.135.169.121",32,220,255
+
++QPING: 0,4,4,0,220,563,341
+Begin receive packet from www.baidu.com!
+
+[11:19:09.796]收←◆AT+QPING=1,"www.baidu.com"
+OK
+
++QPING: 0,"61.135.169.125",32,594,255
+
++QPING: 0,"61.135.169.125",32,228,255
+
++QPING: 0,"61.135.169.125",32,274,255
+
++QPING: 0,"61.135.169.125",32,251,255
+
++QPING: 0,4,4,0,228,594,33
+Begin receive packet from www.baidu.com!
+
+[11:19:20.573]收←◆AT+QPING=1,"www.baidu.com"
+OK
+
++QPING: 0,"61.135.169.125",32,617,255
+
++QPING: 0,"61.135.169.125",32,218,255
+
++QPING: 0,"61.135.169.125",32,205,255
+
++QPING: 0,"61.135.169.125",32,238,255
+
++QPING: 0,4,4,0,205,617,31
+Begin receive packet from www.baidu.com!
