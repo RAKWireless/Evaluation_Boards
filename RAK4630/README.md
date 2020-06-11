@@ -21,7 +21,9 @@ After install, user should replace our pin map header /bsp/variant.h to the one 
 
 C:\Program Files (x86)\Arduino\hardware\Adafruit\Adafruit_nRF52_Arduino\variants\pca10056
 
-And you should find yours path and replace.
+And you should find yours path and replace. Your path maybe like below:
+
+C:\Users\nero.du\AppData\Local\Arduino15\packages\Adafruit\Adafruit_nRF52_Arduino\variants\pca10056
 
 # Install lora lib
 
