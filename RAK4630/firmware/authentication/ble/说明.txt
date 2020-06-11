@@ -1,0 +1,16 @@
+1.用jlink擦掉flash
+2.只烧录测试固件
+3.连接串口
+
+4.串口依次下发测试命令（和截图比较）：
+
+output_power
+output_power pos4dBm
+data_rate nrf_2Mbit
+start_channel 0
+end_channel 0
+time_on_channel 10
+start_tx_carrier
+
+
+5.用频谱仪抓ble波型
