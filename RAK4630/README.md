@@ -38,3 +38,33 @@ We supply many application incluing lora, ble, sensors, IO like RS485, 0-5V,4-20
 # Support 
 
 LoraWAN BLE Cellular Wifi Sensor IO
+
+# Define
+
+The Lorawan lib support define below:
+
+1. ADR
+
+2. Daterate
+
+3. Tx power
+
+4. Join retry 
+
+5. Class A or Class C
+
+6. Confirm/Unconfirm 
+
+7. Port
+
+8. OTAA keys / ABP keys
+
+They are all in .ino
+
+The other must be changed on C:\Users\nero.du\Documents\Arduino\libraries\SX126x_Arduino_base\src\mac\Commissioning.h (find your path)
+
+1. Region
+
+2. OTAA/ABP
+
+3. Dutycycle on/off
