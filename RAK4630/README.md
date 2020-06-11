@@ -2,7 +2,7 @@ How to Use RAK4630 with Arduino IDE
 == 
 2020.6.11
 
-RAK4639 is based on nRF52840, lora+ble module of wisblock. Here I will introduce you how to use it with wisblock. The base board now support usb for download in Arduino IDE. Of course battery is needed.
+RAK4630 is based on nRF52840, lora+ble module of wisblock. Here I will introduce you how to use it with wisblock. The base board now support usb for download in Arduino IDE. Of course battery is needed.
 
 
 # Burn bootloader
