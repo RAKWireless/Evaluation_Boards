@@ -25,7 +25,7 @@ And you should find yours path and replace.
 
 # Install lora lib
 
-We supply a lorawan lib (lorawan/SX126x_Arduino_base) which support ClassA and Class C, region incluing EU868,US915,CN470,AS923,KR920,IN865. Use should add it in Arduino like below:
+We supply a lorawan lib (lorawan/SX126x_Arduino_base) which support ClassA and Class C, region including EU868,US915,CN470,AS923,KR920,IN865. User should add it in Arduino like below:
 
 ![](https://github.com/RAKWireless/Wisblock/blob/master/res/4630_install%20lib.png)
 
