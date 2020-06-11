@@ -1,50 +1,38 @@
-How to Use RAK4260 with Arduino IDE
+How to Use RAK4630 with Arduino IDE
 == 
-2020.4.10
+2020.6.11
 
-RAK4260 is based on ATSAML21J18B from microchip, one lora module of wisblock. Before use it, User should prepare something. Our friend shows how to use it in their base board, more details is at :
+RAK4639 is based on nRF52840, lora+ble module of wisblock. Here I will introduce you how to use it with wisblock. The base board now support usb for download in Arduino IDE. Of course battery is needed.
 
-https://www.hackster.io/electronic-cats/how-to-use-rak4260-with-arduino-ide-4bcff2#comments
-
-Here I will introduce you how to use it with wisblock. Our board is like below. The base board now include uart and usb com. The usb com is one component of wisblock like sensors. In Arduino, we use usb for test, battery is needed.
-
-![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4260/resource/board.jpg) 
 
 # Burn bootloader
 
-Burn bootloader-bast-wan-v3.4.0.bin with Jlink like below:
-![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4260/resource/download.png)
+Burn bootloader/boot.hex with Jlink like below:
+![](https://github.com/RAKWireless/Wisblock/blob/master/res/4630_download.png)
 
 
 # Install BSP
 
-After download bootloader, Install the BSP library.To add board support for our products, start Arduino and open the Preferences window (File > Preferences). Now copy and paste the following URL into the 'Additional Boards Manager URLs' input field:
+After download bootloader, Install the BSP library. We use Adafruit nRF52 by Adaruit in Arduino now.
 
-https://electroniccats.github.io/Arduino_Boards_Index/package_electroniccats_index.json
-If there is already an URL from another manufacturer in that field, click the button at the right end of the field. This will open an editing window allowing you to paste the above URL onto a new line.
-Press the "OK" button.
+![](https://github.com/RAKWireless/Wisblock/blob/master/res/4630%20lib.png)
 
-Press the "OK" button.
-Open the "boards manager" that is in tools --> Board --> board manager.
+After install, user should replace our pin map header /bsp/variant.h to the one in Adafruit nRF52. It maybe like below:
 
-Open the "boards manager" that is in tools --> Board --> board manager.
-Now write "Electronic Cats" (without quotes) in the search bar.
+C:\Program Files (x86)\Arduino\hardware\Adafruit\Adafruit_nRF52_Arduino\variants\pca10056
 
-Now write "Electronic Cats" (without quotes) in the search bar.
-Click in install for "ElectronicCatsSAM DLC", jus wait to finish to install and only close the window.
-
-![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4260/resource/lib.png)
+And you should find yours path and replace.
 
 # Install lora lib
 
-https://github.com/BeelanMX/Beelan-LoRaWAN
+We supply a lorawan lib (lorawan/SX126x_Arduino_base) which support ClassA and Class C, region incluing EU868,US915,CN470,AS923,KR920,IN865. Use should add it in Arduino like below:
 
-# Compile as below
+![](https://github.com/RAKWireless/Wisblock/blob/master/res/4630_install%20lib.png)
 
-![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4260/resource/bastwan.png)
+# Application
 
-You will see the information via usb in serial tool.
+We supply many application incluing lora, ble, sensors, IO like RS485, 0-5V,4-20mA e.g
 
 # Support 
 
-LoraWAN
+LoraWAN BLE Cellular Wifi Sensor IO
