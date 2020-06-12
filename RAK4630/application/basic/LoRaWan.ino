@@ -177,6 +177,7 @@ void setup()
 
 	// EU868 KR920 IN865 AS923 set to 1
     // US915 AU915 set to 2
+	// CN470 set to 11
 	if (!lmh_setSubBandChannels(1))
 	{
 		Serial.println("lmh_setSubBandChannels failed. Wrong sub band requested?");
