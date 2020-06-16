@@ -21,7 +21,7 @@ uint8_t  fix_flag = 0;
                                                               //  1: 250 kHz,
                                                               //  2: 500 kHz,
                                                               //  3: Reserved]
-#define LORA_SPREADING_FACTOR                       12        // [SF7..SF12]
+#define LORA_SPREADING_FACTOR                       7        // [SF7..SF12]
 #define LORA_CODINGRATE                             1         // [1: 4/5,
                                                               //  2: 4/6,
                                                               //  3: 4/7,
@@ -162,10 +162,13 @@ void setup() {
     //delay(1);
   }  
 #endif
-  int k =0;
+  int k = 0;
+  while(1)
+  {
+   k = 0;
   for(k;k<72;k++)
   {
-    Serial.print("Send in ");
+    //Serial.print("Send in ");
     Serial.println(fre[k]);
     Radio.SetChannel( fre[k] );
     Radio.SetPublicNetwork(true);
@@ -174,7 +177,9 @@ void setup() {
                                    LORA_PREAMBLE_LENGTH, LORA_FIX_LENGTH_PAYLOAD_ON,
                                    true, 0, 0, LORA_IQ_INVERSION_ON, 0 );
     Radio.Send(packet,5); 
-    delay(20000);
+    delay(150);
+  }
+   Serial.print("new send again!!");
   }
 }
 
