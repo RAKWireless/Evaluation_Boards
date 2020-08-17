@@ -1,172 +1,95 @@
-# Wisblock
+# LPWAN Evaluation Boards
 
 ### 1 Introduction
-WisBlock series modules are a series of stacked board built by RAK company
-for IoT industry. WisBlock modules support dozens of CPUs, sensors and
-interface circuit boards. It can build circuits like building blocks quickly to realize
-your idea, and through high-speed connectors and fasteners interconnection, it
-can directly compose the reliable industrial products. 
+These evaluation boards are designed to give you a quick start to explore the LoRa/LPWAN world.
+Based on our WisBlock product line, they are 30 x 60 mm small and support USB power supply, 3.7V LiPo battery and 5V solar charging.    
 
-WisBlock series modules are divided into WisBase module, WisDuo module, WisSensor module and WisIO module. 
+These modules can be extended with most of our WisBlock Sensor and WisBlock IO modules. Check out the available WisBlock IO and WisBlock Sensor modules in the [RAKwireless Store](https://store.rakwireless.com/)
 
-RAK5005 WisBase module is a base board of WisBlock, which can be
-connected with CPU, Sensor and IO through the connector of the board, and
-provides direct databus interconnection of these modules on the base board. WisBase module also integrates the power supply circuit to realize low power
-battery power supply. In order to facilitate users, WisBase has reserved USB
-ports, indicator lights, keys and extended IO interfaces. 
+To make it easy for you to start, these modules are pre-flashed with a basic firmware that offers an AT command interface over the USB connector to setup and connect them to a LPWAN gateway and server.
 
-WisDuo module is the core computing unit and wireless connection unit of the
-WisBlock products. It integrates MCU, LoRa, BLE and other wireless
-transceiver modules. The data collected by sensors can be processed and sent
-to the cloud through LoRa wireless links. BLE can also be used to achieve
-short-range communication and indoor positioning function. 
+Please check out our [documentation](https://doc.rakwireless.com) pages for more details.
 
-The WisSensor module is integrated with a MEMS sensor, which can support
-dozens of different sensors. Each WisBase board can support up to four
-different sensors. Through different sensor combinations, specific data
-acquisition can be achieved quickly. Sensors on WisSensor are designed with
-low power consumption to extend battery life.
+There are three different LPWAN Evalution Boards available:   
 
-WisIO module can flexibly expand various application interfaces, such as
-industrial sensor interface, display interface, other wireless protocol extension,
-WisBlock
-4
-button and LED indicator expansion, can be quickly implemented on WisIO
-board. 
+----
+## RAK4260 LPWAN Evaluation Board
+The RAK4260 is based on the Microchip ATSAMR34J18 MCU with an integrated LoRa® transceiver, that complies with the LoRaWan® 1.0.2 protocols.    
+![image](/res/RAK4260-1.png)    
+### Key Features
+- ATSAMR34J18B MCU
+  - 32-bit Arm® Cortex M0+ MCU
+  - UART/I2C/GPIO
+  - 256KB Flash and 40 KB RAM
+- Integrated LoRa® transceiver
+  - Frequency range: 862 to 1020 MHz
+  - Receive Sensitivity down to -148 dBm
+  - Maximum Transmit Power up to 20 dBm
 
-WisBlock supports a set of open source hardware architecture. Users can also
-use the standard connectors of WisBlock to develop their own specific function
-modules, with standard WisBlock modules, quickly develop your own products
-to meet the needs of different industries. 
+The RAK4260 is available for the following LPWAN regions:
+| | |
+|-|-|
+|EU868|IN865|
+|US915|AU915|
+|RU864|AS923|
+|KR920||
+### RAK4260 Setup and Software sample
+Learn in [RAK4260](/RAK4260) how to setup the ArduinoIDE and check out our sample application.     
+More details can be found in our [Web Documentation](https://doc.rakwireless.com/rak4260-lora-evaluation-board/overview)    
 
-WisBlock series boards are not only functional testability products in product
-development verification stage, but also industrial products oriented to mass
-production. It uses a high-speed connector to ensure the integrity of the signal. At the same time, it is equipped with fastening screw, which can be used in
-vibration environment. And WisBlock products can be used reliably in various
-civil and industrial scenarios through rigorous reliability tests. 
+----
+## RAK4600 LPWAN Evaluation Board
+The 4600 is based on the nRF52832  MCU and a SX1276 LoRa® transceiver, that complies with the LoRaWan® 1.0.2 protocols.    
+![image](/res/RAK4600-1.jpg)    
+### Key Features
+- nRF52832 MCU
+  - 64MHz Cortex-M4 with FPU
+  - UART/I2C/GPIO
+  - 512 kB flash
+  - 64kB RAM
+- SX1276 LoRa® transceiver
+  - Frequency range: 863–870MHz (EU) / 902–928MHz (US), ISM and SRD systems
+  - Ultra-Low Power Consumption 1.5uA in sleep mode
+- 8 mBit NOR flash
 
-WisBlock uses a compact stacked hardware design, which integrates various
-computing, connecting and sensor circuits in the size of 60*30mm. The
-compact size makes it easy for users to build in various customized housings
-to achieve complete products. RAK also have a series of housings for
-WisBlock modules, which can meet the requirements of various protection
-levels.
+The RAK4200 is available for the following LPWAN regions:
+| | |
+|-|-|
+|EU433|IN865|
+|EU868|AU915|
+|US915|AS923|
+|CN470|KR920|
+|RU864||
+### RAK4600 Setup and Software sample
+Learn in [RAK4600](/RAK4600/arduino) how to setup the ArduinoIDE and check out our sample application.     
+Learn in [RAK4600](/RAK4600/micropython) how to program the RAK4600 in microPython.     
+More details can be found in our [Web Documentation](https://doc.rakwireless.com/rak4600-lora-evaluation-board/overview)    
 
-![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/wisblock.png)
+----
+## RAK4200 LPWAN Evaluation Board
+The RAK4200 is based on the STM32L071 MCU and a SX1276 LoRa® transceiver, that complies with the LoRaWan® 1.0.2 protocols.    
+![image](/res/RAK4200-1.png)    
+### Key Features
+- STM32L071 MCU
+  - ARM 32-bit Cortex – M0+ with MPU
+  - UART/I2C/GPIO
+  - Up to 192KB flash memory with ECC
+  - 20KB RAM
+  - 6KB of data EEPROM with ECC
+- SX1276 LoRa® transceiver
+  - Frequency range: 863–870MHz (EU) / 902–928MHz (US), ISM and SRD systems
+  - Ultra-Low Power Consumption 1.5uA in sleep mode
 
+The RAK4200 is available for the following LPWAN regions:
+| | |
+|-|-|
+|EU433|IN865|
+|EU868|AU915|
+|US915|AS923|
+|CN470|KR920|
+|RU864||
+### RAK4200 Setup and Software sample
+Learn in [RAK4200](/RAK4200) how to setup the ArduinoIDE and check out our sample application.     
+More details can be found in our [Web Documentation](https://doc.rakwireless.com/rak4200-lora-evaluation-board)    
 
-### 2 Application Scenarios
- Wireless Sensor Network
-
- Environmental monitoring
-
- Wireless data transmission
-
- Data acquisition in Industrial site
-
- Location and tracking of personnel or moving objects
-
- Wired interface converted 
-
-### 3 Main Features
- Stacked building block design, which facilitates function realization and
-expansion
-
- With high-speed interconnection connector in WisBase board to ensure the
-signal integrity
-
- Supports multiple main low power MCUs
-
- Supports multiple sensors, flexible selection, and can support up to four
-different sensors
-
- External interface is extensible
-
- Supports low power battery power supply
-
- Supports lithium battery charging
-
- Supports solar charging
-
- Satisfying Industrial Level Reliability Design
-
- Module size is compact, the minimum size is: 60*30mm
-
-### 4 Typical Applications
-WisBlock module can be used to quickly build engineering prototype, select
-different functional modules for combination, and achieve different sensor data
-acquisition, define and implement your own products quickly.
-
-![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/1.png)
-
-WisBlock series modules are not only for rapid implementation of engineering
-prototype, but also can be used with RAK industrial protective housing to
-compose industrial products. Under the unified management of WisDM, a
-complete solution of IoT is formed by wireless aggregation of node data
-through RAK industrial gateway.
-
-![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/2.png)
-
-### 5 WisBlock Series Product 
-
-![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/3.png)
-
-### 6 Interfaces
-
-RAK5005 provides the following interfaces, headers, jumpers, buttons and
-connectors:
-
- 1 PCS connector forWisDuo
-
- 1 PCS connector for WisIO
-
- 4 PCS connector for WisSensor
-
- Micro USB
-
- 3 sets of 4-pin 2.54mm Headers (UART, GPIOS, I2C, power etc.) 
-
- 2-pin Battery interface
-
- 2-pin Solar Panel interface
-
- LEDs
-
- Reset Button
-
-### 7 Electrical and Mechanical Specifications
-
-Stresses above those listed as “absolute maximum ratings” may cause
-permanent damage to the device. This is a stress rating, functional operation of
-the device under these conditions is not advised. Exposure to maximum rating
-conditions may affect device reliability
-
-![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/4.png)
-
-Here are the detailed dimensions of the RAK5005:
-
-![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/5.png)
-
-### 8 WisBlock Module in Production
-
-RAK5005 supports kinds of module, according to the function and the position on
-the RAK5005, they are classified into three categories:
-
-WisDuo: containing MCU and wireless link transceiver. 
-
-WisSensor: integrate mems sensor
-
-WisIO: to extend IO, power supply and sensors. 
-
-The following table shows the WisDuo Modules.
-
-![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/6.png)
-
-The following table shows the WisSensor Modules.
-
-![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/7.png)
-
-The following table shows the WisIO Modules.
-
-![wisblock](https://github.com/RAKWireless/Wisblock/blob/master/res/8.png)
 

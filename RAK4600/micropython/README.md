@@ -19,12 +19,12 @@ LoRaWAN is a tiny loRaWAN realized by python from below and I have modified bsp 
 ## Burn firmware
 
 First burn the micropython_rak4600.hex with jlink like below:
-![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4600/image/burn.png)
+![](/RAK4600/image/burn.png)
 
 ## Connect to serial
 
 Then connect board(do not forget antenna) to your PC with USB, open the serial tool, press reset button, it will show:
-![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4600/image/serial.png)
+![](/RAK4600/image/serial.png)
 
 Congradulations! It has run normally! Because our hex includes the LoRaWAN. What you need is just push the lora.py to board file system with ampy. How to install ampy? You can refer to this:
 
@@ -42,18 +42,18 @@ REGION = “EU”
 
 Notes: “EU” for eu868, “AU” for au915, “US” for us915, “AS” for as920
 
-![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4600/image/repl.png)
+![](/RAK4600/image/repl.png)
 
 Everything is OK and ready to send your data to TTN! In serial tool, input below:
 import lora
 
 lora.send(“123”)
 
-![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4600/image/test.png)
+![](/RAK4600/image/test.png)
 
 After Tx Finish, you will see it in TTN like below:
 
-![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4600/image/ttn.png)
+![](/RAK4600/image/ttn.png)
 
 Done! Very easy.
 
@@ -68,9 +68,9 @@ User can do any change they want.
 We are keeping study how to run script automatically, other than just in REPL mode. If you make it true, it is nice to share with us and other developers
 
 Your TTN config should like this. Remember disable the Frame counter checks, because our demo disable it in lora.py:
-![](https://github.com/RAKWireless/Wisblock/blob/master/RAK4600/image/abp.png)
+![](/RAK4600/image/abp.png)
 
-Here also shows how to use with wisblock sensor
+Here also shows how to use with WisBlock sensor
 
 1. Because of bme680 is large to REPL, it is in the firmware. Just use environment_test.py to test.
 2. All sensor script is independent. Use REPL to push what you need.
