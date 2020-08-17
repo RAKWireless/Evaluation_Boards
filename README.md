@@ -40,7 +40,7 @@ More details can be found in our [Web Documentation](https://doc.rakwireless.com
 ----
 ## RAK4600 LPWAN Evaluation Board
 The 4600 is based on the nRF52832  MCU and a SX1276 LoRa® transceiver, that complies with the LoRaWan® 1.0.2 protocols.    
-![image](/res/RAK4600-1.jpg)    
+![image](/res/RAK4600-s.jpg)    
 ### Key Features
 - nRF52832 MCU
   - 64MHz Cortex-M4 with FPU
