@@ -1,21 +1,14 @@
 
 
-# Change log 
-2020.08.17 
-Reuse SW example and tutorials for RAK4200 (uses same MCU and LoRa Transceiver as RAK811) bernd.giesecke@rakwireless.com
-
 2020.4.20
 1. Support sensor,like bme680, lis3dh, lps22hb, max_7q, opt3001, shtc3
 2. Support IO, like RS485, GPIO
 
-# RAK4200_LoRaWAN_Arduino 
-2020.08.17 
-Rename for RAK4200 (uses same MCU and LoRa Transceiver as RAK811) bernd.giesecke@rakwireless.com
-
+# RAK811_LoRaWAN_Arduino 
 2019.12.30
 
 
-Firstly, thank you very much to .@sabas1080 for his contribution on RAK4200/RAK811 LoRa Tracker board + Arduino.
+Firstly, thank you very much to .@sabas1080 for his contribution on RAK811 LoRa Tracker board + Arduino.
 
 1. What is Arduino?
 If you know little about Arduino, please have a look below:  
@@ -25,7 +18,7 @@ If you know little about Arduino, please have a look below:
 [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
 
 3. What lib is used?  
-RAK4200/RAK811 is based on STM32L151.Therefore Arduino Core for Arduino_Core_STM32 is suitable for RAK4200/RAK811.
+RAK811 is based on STM32L151.Therefore Arduino Core for Arduino_Core_STM32 is suitable for RAK811.
 
 4. How to install Arduino_Core_STM32 in Arduino?  
 [https://github.com/stm32duino/Arduino_Core_STM32](https://github.com/stm32duino/Arduino_Core_STM32)  
@@ -42,7 +35,7 @@ If install completed as following:
     ![LoRaWAN library](/res/lib.png)
 
 
-6. OK, development environment is finished. Open the Arduino_RAK4200_LoRaWAN.ino，config 3 parameters for LoRaWAN_ABP. The demo is test in US915. If you want to define other region, you should change in the lib, the path in your pc maybe C:\Users\..\Documents\Arduino\libraries\TinyLoRa\TinyLoRa.h.  
+6. OK, development environment is finished. Open the Arduino_RAK811_LoRaWAN.ino，config 3 parameters for LoRaWAN_ABP. The demo is test in US915. If you want to define other region, you should change in the lib, the path in your pc maybe C:\Users\..\Documents\Arduino\libraries\TinyLoRa\TinyLoRa.h.  
 
 ![config 3 parameters](/res/config.png)  
 
@@ -65,7 +58,7 @@ Or you can add region define like below:
 
 
 8. When download ok, the Gateway and server are working properly.  
-The RAK4200/RAK811 will be auto send data to server:
+The RAK811 will be auto send data to server:
 ![Joinning LoRaWAN](/res/log.png)  
 9. We test it in Lora Server, receive data per 10s:  
 ![TTN data](/res/send%20data.png)

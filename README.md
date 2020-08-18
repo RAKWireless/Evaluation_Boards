@@ -66,21 +66,20 @@ Learn in [RAK4600](/RAK4600/micropython) how to program the RAK4600 in microPyth
 More details can be found in our [Web Documentation](https://doc.rakwireless.com/rak4600-lora-evaluation-board/overview)    
 
 ----
-## RAK4200 LPWAN Evaluation Board
-The RAK4200 is based on the STM32L071 MCU and a SX1276 LoRa® transceiver, that complies with the LoRaWan® 1.0.2 protocols.    
+## RAK811 LPWAN Evaluation Board
+The RAK811 is based on the STM32L151 MCU and a SX1276 LoRa® transceiver, that complies with the LoRaWan® 1.0.2 protocols.    
 ![image](/res/RAK4200-1.png)    
 ### Key Features
-- STM32L071 MCU
-  - ARM 32-bit Cortex – M0+ with MPU
+- STM32L151 MCU
+  - ARM 32-bit Cortex – M3
   - UART/I2C/GPIO
-  - Up to 192KB flash memory with ECC
-  - 20KB RAM
-  - 6KB of data EEPROM with ECC
+  - 128KB flash memory with ECC
+  - 16KB RAM
 - SX1276 LoRa® transceiver
   - Frequency range: 863–870MHz (EU) / 902–928MHz (US), ISM and SRD systems
   - Ultra-Low Power Consumption 1.5uA in sleep mode
 
-The RAK4200 is available for the following LPWAN regions:
+The RAK811 is available for the following LPWAN regions:
 | | |
 |-|-|
 |EU433|IN865|
@@ -88,8 +87,8 @@ The RAK4200 is available for the following LPWAN regions:
 |US915|AS923|
 |CN470|KR920|
 |RU864||
-### RAK4200 Setup and Software sample
-Learn in [RAK4200](/RAK4200) how to setup the ArduinoIDE and check out our sample application.     
-More details can be found in our [Web Documentation](https://doc.rakwireless.com/rak4200-lora-evaluation-board)    
+### RAK811 Setup and Software sample
+Learn in [RAK811](/RAK811) how to setup the ArduinoIDE and check out our sample application.     
+More details can be found in our [Web Documentation](https://doc.rakwireless.com/rak811-lora-evaluation-board)    
 
 
