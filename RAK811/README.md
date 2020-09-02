@@ -25,7 +25,7 @@ If you want to know more about Arduino, please refer to its official website:
 First of all, the IDE to be used is the official Arduino IDE. This is an open-source software that can be downloaded from here:
 [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
 
-# Install Additional Libiraries
+# Install Additional Libraries
 The RAK811 module is integrated with a Semtech's SX1276 transceiver and a STM32L151 MCU. In order to work with the Arduino IDE, the STM32 Core library has to be installed. For this tutorial, the SMT32 Core library, version 1.9.0 was tested. 
 
 ## Install STM32 Core Library  
